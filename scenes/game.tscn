@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dermbt84uuw0" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dj3wy8sidk1ih" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/PhaseShift_Tiles.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_yqjtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")

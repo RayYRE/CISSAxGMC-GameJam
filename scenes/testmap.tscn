@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=4 uid="uid://c8xbd8b7sbn0a"]
+[gd_scene load_steps=4 format=4 uid="uid://6t1xa28as2g1"]
 
-[ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/PhaseShift_Tiles.png" id="1_kwcxs"]
+[ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="1_kwcxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwcxs"]
 texture = ExtResource("1_kwcxs")
