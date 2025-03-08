@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://bd8xcgjhq8u3x"]
+[gd_scene load_steps=6 format=4 uid="uid://28sifxo01vcs"]
 
 [ext_resource type="Script" uid="uid://dg8i1ho4x1gm" path="res://scripts/map_2.gd" id="1_lk7cf"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/PhaseShift_Tiles.png" id="2_5kldx"]

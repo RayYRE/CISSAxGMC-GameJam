@@ -9,6 +9,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# If space bar pressed, world switch
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("phaseshift"):
 		GameManager.swap_worlds("res://scenes/map2.tscn")
 	pass
