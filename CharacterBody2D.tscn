@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://b4jich8gswntv"]
-
-[node name="Player" type="CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
