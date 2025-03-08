@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://guus6pd2oq50"
+path="res://.godot/imported/short winning sfx-_8bit.mp3-ba9b08b7fd389e1b15622ce92a20add8.mp3str"
+
+[deps]
+
+source_file="res://assets/music/short winning sfx-_8bit.mp3"
+dest_files=["res://.godot/imported/short winning sfx-_8bit.mp3-ba9b08b7fd389e1b15622ce92a20add8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
