@@ -9,9 +9,10 @@ distance = -1.0
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -14)
 zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 10)
