@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cv2teyw3g3obq"]
+[gd_scene load_steps=0 format=3 uid="uid://cv2teyw3g3obq"]
 
 [node name="Player2" type="CharacterBody2D"]
 
