@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PhaseShift"
-run/main_scene="uid://b3dnqm7fpr4lx"
+run/main_scene="uid://b82fsrl1wopr6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

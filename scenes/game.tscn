@@ -275,6 +275,7 @@ texture = ExtResource("6_p57ef")
 
 [sub_resource type="TileSet" id="TileSet_lnu2h"]
 physics_layer_0/collision_layer = 2
+physics_layer_1/collision_layer = 0
 sources/0 = SubResource("TileSetAtlasSource_yqjtg")
 sources/1 = SubResource("TileSetAtlasSource_u5sy4")
 
@@ -314,10 +315,10 @@ position = Vector2(-16, -80)
 tile_map_data = PackedByteArray("AAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAOAAUAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAP//AAAAAAAAAAANAP//AAAAAAAAAAAMAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAFAP//AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAGAP//AAACAAAAAAAGAAAAAAACAAAAAAAFAAAAAAACAAAAAAAHAAAAAAACAAAAAAAHAP//AAACAAAAAAAIAAEAAAACAAAAAAAJAAEAAAACAAAAAAAMAAEAAAACAAAAAAANAAEAAAACAAAAAAANAAAAAAACAAAAAAAOAAAAAAACAAAAAAAOAAEAAAACAAAAAAAPAAEAAAACAAAAAAAHAAUAAAAAAAMAAAAIAAUAAAAAAAMAAAAJAAUAAAAAAAMAAAAMAAUAAAAAAAMAAAANAAUAAAAAAAMAAAALAAAAAAAAAAMAAAAKAAAAAAAAAAMAAAAFAP7/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAPz/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_lnu2h")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Void" type="Area2D" parent="."]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
 position = Vector2(228.75, 36)
 shape = SubResource("RectangleShape2D_p57ef")
 
@@ -325,4 +326,4 @@ shape = SubResource("RectangleShape2D_p57ef")
 unique_name_in_owner = true
 position = Vector2(0, -10)
 
-[connection signal="body_shape_entered" from="Area2D" to="Satyr" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_entered" from="Void" to="Satyr" method="_on_area_2d_body_shape_entered"]
