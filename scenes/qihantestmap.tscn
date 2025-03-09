@@ -1,6 +1,6 @@
-[gd_scene load_steps=28 format=4 uid="uid://c3e6vl33cf5tv"]
+[gd_scene load_steps=28 format=4 uid="uid://dmhgghi54f7pi"]
 
-[ext_resource type="PackedScene" uid="uid://b2qrqgrbkabxy" path="res://scenes/satyr.tscn" id="1_lwrec"]
+[ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="1_lwrec"]
 [ext_resource type="Texture2D" uid="uid://tw6teanhw6ow" path="res://assets/sprites/Lab/Scifi lab Files/layers/Props/tank-1.png" id="1_t7cb5"]
 [ext_resource type="Texture2D" uid="uid://cmycdo2lokfec" path="res://assets/sprites/Lab/Scifi lab Files/layers/Props/tank-2.png" id="2_fs0my"]
 [ext_resource type="Texture2D" uid="uid://dplfwcmrg68bg" path="res://assets/sprites/Lab/Scifi lab Files/layers/Props/tank-3.png" id="3_fbo8b"]

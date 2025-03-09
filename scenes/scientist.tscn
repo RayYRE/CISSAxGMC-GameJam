@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://fcvrnfsg4v0d"]
+[gd_scene load_steps=9 format=3 uid="uid://bov3r7w307myn"]
 
-[ext_resource type="Script" uid="uid://cgf7sjot6ohh2" path="res://scripts/scientist.gd" id="1_bcf38"]
+[ext_resource type="Script" path="res://scripts/scientist.gd" id="1_bcf38"]
 [ext_resource type="Texture2D" uid="uid://bws5ugi0v05xq" path="res://assets/sprites/labnpcs.png" id="2_8y8wj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ip72o"]

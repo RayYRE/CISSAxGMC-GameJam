@@ -54,3 +54,8 @@ func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_inde
 func _on_hitbox_area_body_entered(body: Node2D) -> void:
 	print("dead")
 	player_death()
+
+
+func _on_void_body_entered(body: Node2D) -> void:
+	await get_tree().create_timer(0.5).timeout
+	player_death()
