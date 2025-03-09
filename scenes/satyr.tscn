@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dwaieox6t40d5"]
+[gd_scene load_steps=24 format=3 uid="uid://b2qrqgrbkabxy"]
 
 [ext_resource type="Script" uid="uid://diaru47nsfyo0" path="res://scripts/satyr.gd" id="1_pha4t"]
 [ext_resource type="Texture2D" uid="uid://dsxo7lgn5gtfy" path="res://assets/sprites/Lab/Satyr/satiro-Sheet v1.1.png" id="2_cfhio"]
@@ -151,7 +151,12 @@ animations = [{
 radius = 5.0
 height = 14.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pha4t"]
+radius = 9.0
+height = 28.0
+
 [node name="Satyr" type="CharacterBody2D"]
+collision_mask = 15
 script = ExtResource("1_pha4t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -162,3 +167,13 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 3)
 shape = SubResource("CapsuleShape2D_pbccl")
+
+[node name="HitboxArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
+position = Vector2(2, 3)
+shape = SubResource("CapsuleShape2D_pha4t")
+
+[connection signal="body_entered" from="HitboxArea" to="." method="_on_hitbox_area_body_entered"]
