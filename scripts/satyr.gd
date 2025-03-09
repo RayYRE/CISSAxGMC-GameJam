@@ -40,3 +40,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func player_death():
+	await get_tree().create_timer(0.5).timeout
+	animated_sprite.flip_h = false
+	global_position = %SpawnPoint.position
+	
+
+func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	player_death()

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf7ra551hpl3x"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sh265"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7odrv"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_sh265")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_7odrv")
