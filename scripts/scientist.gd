@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed: float = 50.0  
 @export var gravity: float = 980.0  
 @export var detect_range: float = 100.0
-@export var lose_range: float = 20.0  
 @onready var tilemap_world1 = get_tree().current_scene.get_node("TileMapLayerPresent")
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -29,9 +28,6 @@ func _physics_process(delta: float) -> void:
 					animated_sprite.play("walk")
 				else:
 					animated_sprite.play("idle")
-
-			if global_position.distance_to(player.global_position) < lose_range:
-				print("Player lost!")
 		else:
 			animated_sprite.play("idle")
 			velocity.x = 0

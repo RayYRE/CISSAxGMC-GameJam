@@ -342,3 +342,7 @@ position_smoothing_enabled = true
 
 [node name="Scientist" parent="." instance=ExtResource("5_fhmyy")]
 position = Vector2(229, -17)
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1, -16)
