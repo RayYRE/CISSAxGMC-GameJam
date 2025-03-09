@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_0p3n5"]
 [ext_resource type="Texture2D" uid="uid://bjkhaaaldvx2j" path="res://assets/sprites/PhaseShift_FutureLabTiles.png" id="2_ramgd"]
 [ext_resource type="Texture2D" uid="uid://d02y4wk6gtbjn" path="res://assets/sprites/PhaseShift_LabTiles.png" id="3_ramgd"]
-[ext_resource type="PackedScene" uid="uid://b2qrqgrbkabxy" path="res://scenes/satyr.tscn" id="4_fhmyy"]
-[ext_resource type="PackedScene" uid="uid://fcvrnfsg4v0d" path="res://scenes/scientist.tscn" id="5_fhmyy"]
+[ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="4_fhmyy"]
+[ext_resource type="PackedScene" uid="uid://bov3r7w307myn" path="res://scenes/scientist.tscn" id="5_fhmyy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x76j4"]
 texture = ExtResource("2_0p3n5")
@@ -346,3 +346,6 @@ position = Vector2(229, -17)
 [node name="SpawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(1, -16)
+
+[node name="Scientist2" parent="." instance=ExtResource("5_fhmyy")]
+position = Vector2(398, -98)

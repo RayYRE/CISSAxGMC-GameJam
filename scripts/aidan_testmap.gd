@@ -1,18 +1,16 @@
 extends Node2D
 
-@onready var tilemap_world1 = $TileMapLayerPresent  # Tilemap for the first world
-@onready var tilemap_world2 = $TileMapLayerFuture # Tilemap for the second world
-@onready var enemies_group = []  # Store references to the enemies
-
+@onready var tilemap_world1 = $TileMapLayerPresent
+@onready var tilemap_world2 = $TileMapLayerFuture
+@onready var enemies_group = [] 
 var is_world1_active = true
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	enemies_group = get_tree().get_nodes_in_group("enemies") 
 	tilemap_world1.set_enabled(true)
 	tilemap_world2.set_enabled(false)
-	pass # Replace with function body.
+	pass 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# If space bar pressed, world switch
 	if Input.is_action_just_pressed("phaseshift"):

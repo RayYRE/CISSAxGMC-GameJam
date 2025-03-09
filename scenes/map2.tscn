@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://fsfutpnn2o84"]
+[gd_scene load_steps=6 format=4 uid="uid://bd8xcgjhq8u3x"]
 
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_5kldx"]
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="3_lk7cf"]
