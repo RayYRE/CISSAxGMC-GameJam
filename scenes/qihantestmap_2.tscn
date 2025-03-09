@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="13_6bp0v"]
 [ext_resource type="PackedScene" uid="uid://qcn0qfx51cxr" path="res://scenes/platform_2d.tscn" id="15_x7xbr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rtlgy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cp5ni"]
 texture = ExtResource("1_rtlgy")
 0:0/0 = 0
 1:0/0 = 0
@@ -39,7 +39,7 @@ texture = ExtResource("1_rtlgy")
 1:6/0 = 0
 2:6/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cp5ni"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7xbr"]
 texture = ExtResource("2_cp5ni")
 0:0/0 = 0
 0:1/0 = 0
@@ -164,7 +164,7 @@ texture = ExtResource("2_cp5ni")
 17:7/0 = 0
 18:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7xbr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fh2ww"]
 texture = ExtResource("3_x7xbr")
 2:0/0 = 0
 2:1/0 = 0
@@ -277,7 +277,7 @@ texture = ExtResource("3_x7xbr")
 14:10/0 = 0
 15:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fh2ww"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y24sm"]
 texture = ExtResource("4_fh2ww")
 0:0/0 = 0
 1:0/0 = 0
@@ -456,7 +456,7 @@ texture = ExtResource("4_fh2ww")
 14:10/0 = 0
 15:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y24sm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fvji1"]
 texture = ExtResource("5_y24sm")
 0:0/0 = 0
 1:0/0 = 0
@@ -635,7 +635,7 @@ texture = ExtResource("5_y24sm")
 14:10/0 = 0
 15:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fvji1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xqet"]
 texture = ExtResource("6_fvji1")
 0:0/0 = 0
 0:1/0 = 0
@@ -1002,7 +1002,7 @@ texture = ExtResource("6_fvji1")
 0:13/0 = 0
 0:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xqet"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5p2s"]
 texture = ExtResource("7_1xqet")
 0:0/0 = 0
 1:0/0 = 0
@@ -1026,7 +1026,7 @@ texture = ExtResource("7_1xqet")
 1:6/0 = 0
 2:6/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5p2s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inrij"]
 texture = ExtResource("8_y5p2s")
 0:0/0 = 0
 1:0/0 = 0
@@ -1050,7 +1050,7 @@ texture = ExtResource("8_y5p2s")
 1:6/0 = 0
 2:6/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inrij"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4g2a"]
 texture = ExtResource("9_inrij")
 0:0/0 = 0
 1:0/0 = 0
@@ -1353,7 +1353,7 @@ texture = ExtResource("9_inrij")
 18:14/0 = 0
 19:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4g2a"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48lcv"]
 texture = ExtResource("10_m4g2a")
 1:0/0 = 0
 2:0/0 = 0
@@ -1401,7 +1401,7 @@ texture = ExtResource("10_m4g2a")
 2:14/0 = 0
 12:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48lcv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwpwt"]
 texture = ExtResource("11_48lcv")
 3:5/0 = 0
 4:5/0 = 0
@@ -1473,7 +1473,7 @@ texture = ExtResource("11_48lcv")
 15:13/0 = 0
 16:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwpwt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6bp0v"]
 texture = ExtResource("12_kwpwt")
 0:0/0 = 0
 0:1/0 = 0
@@ -1591,7 +1591,7 @@ texture = ExtResource("12_kwpwt")
 18:9/0 = 0
 18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6bp0v"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffoyl"]
 texture = ExtResource("6_fvji1")
 0:0/0 = 0
 1:0/0 = 0
@@ -1688,42 +1688,44 @@ texture = ExtResource("6_fvji1")
 [sub_resource type="TileSet" id="TileSet_c51xa"]
 physics_layer_0/collision_layer = 1
 navigation_layer_0/layers = 1
-sources/0 = SubResource("TileSetAtlasSource_rtlgy")
-sources/2 = SubResource("TileSetAtlasSource_1xqet")
-sources/3 = SubResource("TileSetAtlasSource_y5p2s")
-sources/4 = SubResource("TileSetAtlasSource_inrij")
-sources/5 = SubResource("TileSetAtlasSource_m4g2a")
-sources/6 = SubResource("TileSetAtlasSource_48lcv")
-sources/7 = SubResource("TileSetAtlasSource_kwpwt")
-sources/8 = SubResource("TileSetAtlasSource_6bp0v")
-sources/10 = SubResource("TileSetAtlasSource_cp5ni")
-sources/11 = SubResource("TileSetAtlasSource_x7xbr")
-sources/12 = SubResource("TileSetAtlasSource_fh2ww")
-sources/13 = SubResource("TileSetAtlasSource_y24sm")
-sources/14 = SubResource("TileSetAtlasSource_fvji1")
+sources/0 = SubResource("TileSetAtlasSource_cp5ni")
+sources/2 = SubResource("TileSetAtlasSource_y5p2s")
+sources/3 = SubResource("TileSetAtlasSource_inrij")
+sources/4 = SubResource("TileSetAtlasSource_m4g2a")
+sources/5 = SubResource("TileSetAtlasSource_48lcv")
+sources/6 = SubResource("TileSetAtlasSource_kwpwt")
+sources/7 = SubResource("TileSetAtlasSource_6bp0v")
+sources/8 = SubResource("TileSetAtlasSource_ffoyl")
+sources/10 = SubResource("TileSetAtlasSource_x7xbr")
+sources/11 = SubResource("TileSetAtlasSource_fh2ww")
+sources/12 = SubResource("TileSetAtlasSource_y24sm")
+sources/13 = SubResource("TileSetAtlasSource_fvji1")
+sources/14 = SubResource("TileSetAtlasSource_1xqet")
 
 [node name="qihantestmap2" type="Node2D"]
 
-[node name="Platform1" parent="." instance=ExtResource("15_x7xbr")]
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Platform1" parent="CanvasGroup" instance=ExtResource("15_x7xbr")]
 position = Vector2(208, -32)
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Sky" type="Parallax2D" parent="CanvasGroup"]
 scroll_scale = Vector2(0, 0)
 scroll_offset = Vector2(384, 192)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/Sky"]
 position = Vector2(0.00012207, 3.05176e-05)
 scale = Vector2(1.5, 1.45455)
 texture = ExtResource("5_y24sm")
 centered = false
 
-[node name="Parallax2D2" type="Parallax2D" parent="."]
+[node name="Buildings" type="Parallax2D" parent="CanvasGroup"]
 scroll_scale = Vector2(0.5, 0)
 scroll_offset = Vector2(-32, 192)
 repeat_size = Vector2(384, 0)
 repeat_times = 8
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/Buildings"]
 scale = Vector2(1.5, 1.45455)
 texture = ExtResource("3_x7xbr")
 centered = false

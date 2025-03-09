@@ -1,6 +1,6 @@
 [gd_scene load_steps=45 format=4 uid="uid://di2u2w331tiv5"]
 
-[ext_resource type="Script" uid="uid://bgvfcn1x1g32p" path="res://scripts/tutorial.gd" id="1_wr8iv"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_wr8iv"]
 [ext_resource type="Texture2D" uid="uid://cov265n6w2giq" path="res://assets/sprites/Lab/sci-fi-interior-platform/PNG/background.png" id="2_e13mp"]
 [ext_resource type="FontFile" uid="uid://b26jjuocxwqqf" path="res://assets/Retro Gaming.ttf" id="3_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="4_cmspm"]
