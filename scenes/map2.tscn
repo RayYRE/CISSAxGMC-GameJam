@@ -1,10 +1,26 @@
-[gd_scene load_steps=6 format=4 uid="uid://bd8xcgjhq8u3x"]
+[gd_scene load_steps=6 format=4 uid="uid://fsfutpnn2o84"]
 
-[ext_resource type="Script" uid="uid://dg8i1ho4x1gm" path="res://scripts/map_2.gd" id="1_lk7cf"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_5kldx"]
-[ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="3_lk7cf"]
+[ext_resource type="PackedScene" uid="uid://b2qrqgrbkabxy" path="res://scenes/satyr.tscn" id="3_lk7cf"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lk7cf"]
+[sub_resource type="GDScript" id="GDScript_jji5p"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	# If space bar pressed, world switch
+	if Input.is_action_just_pressed(\"phaseshift\"):
+		GameManager.swap_worlds()
+	pass
+"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jji5p"]
 texture = ExtResource("2_5kldx")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -72,10 +88,10 @@ texture = ExtResource("2_5kldx")
 
 [sub_resource type="TileSet" id="TileSet_lk7cf"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lk7cf")
+sources/0 = SubResource("TileSetAtlasSource_jji5p")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_lk7cf")
+script = SubResource("GDScript_jji5p")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD//wAAAAAEAAEAAAAAAAAAAAAEAAEAAAABAP7/AAAEAAEAAAACAP7/AAAEAAEAAAADAAAAAAAEAAEAAAAEAAAAAAAEAAEAAAAFAAAAAAAEAAEAAAAGAAAAAAAEAAIAAAAHAAAAAAAEAAIAAAAIAAAAAAAEAAIAAAALAAAAAAAEAAIAAAAMAAAAAAAEAAIAAAAJAAAAAAAEAAEAAAAKAAAAAAAEAAEAAAAFAPv/AAAEAAEAAAAFAPr/AAAEAAEAAAAGAPr/AAAEAAEAAAAGAPv/AAAEAAEAAAAGAPn/AAAEAAEAAAAHAPn/AAAEAAEAAAAHAPr/AAAEAAEAAAAHAPv/AAAEAAEAAAAIAPv/AAAEAAEAAAAIAPz/AAAEAAEAAAAJAPz/AAAEAAEAAAAJAPv/AAAEAAEAAAAMAPv/AAAEAAEAAAAMAPz/AAAEAAEAAAANAPz/AAAEAAEAAAANAPv/AAAEAAEAAAAKAPv/AAAEAAIAAAALAPv/AAAEAAIAAAANAPr/AAAEAAEAAAAOAPr/AAAEAAEAAAAPAPr/AAAEAAEAAAAPAPv/AAAEAAEAAAAOAPv/AAAEAAEAAAAOAPz/AAAEAAEAAAAPAPz/AAAEAAEAAAAQAPv/AAAEAAEAAAANAAAAAAAEAAEAAAAOAAAAAAAEAAEAAAAPAAAAAAAEAAEAAAAQAAAAAAAEAAEAAAATAP//AAAEAAIAAAAVAP3/AAAEAAIAAAASAPv/AAAEAAIAAAA=")

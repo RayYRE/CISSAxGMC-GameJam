@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dwaieox6t40d5"]
+[gd_scene load_steps=23 format=3 uid="uid://b2qrqgrbkabxy"]
 
 [ext_resource type="Script" uid="uid://diaru47nsfyo0" path="res://scripts/satyr.gd" id="1_pha4t"]
 [ext_resource type="Texture2D" uid="uid://dsxo7lgn5gtfy" path="res://assets/sprites/Lab/Satyr/satiro-Sheet v1.1.png" id="2_cfhio"]

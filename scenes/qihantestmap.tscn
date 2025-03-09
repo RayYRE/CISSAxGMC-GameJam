@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dmhgghi54f7pi"]
+[gd_scene load_steps=18 format=3 uid="uid://c3e6vl33cf5tv"]
 
 [ext_resource type="Texture2D" uid="uid://tw6teanhw6ow" path="res://assets/sprites/Lab/Scifi lab Files/layers/Props/tank-1.png" id="1_t7cb5"]
 [ext_resource type="Texture2D" uid="uid://cmycdo2lokfec" path="res://assets/sprites/Lab/Scifi lab Files/layers/Props/tank-2.png" id="2_fs0my"]
