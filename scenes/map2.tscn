@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg8i1ho4x1gm" path="res://scripts/map_2.gd" id="1_lk7cf"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_5kldx"]
-[ext_resource type="PackedScene" uid="uid://dj3wy8sidk1ih" path="res://scenes/player.tscn" id="2_jji5p"]
+[ext_resource type="PackedScene" uid="uid://b33quol8cru6b" path="res://scenes/satyr.tscn" id="3_lk7cf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jji5p"]
 texture = ExtResource("2_5kldx")
@@ -81,9 +81,10 @@ script = ExtResource("1_lk7cf")
 tile_map_data = PackedByteArray("AAD//wAAAAAEAAEAAAAAAAAAAAAEAAEAAAABAP7/AAAEAAEAAAACAP7/AAAEAAEAAAADAAAAAAAEAAEAAAAEAAAAAAAEAAEAAAAFAAAAAAAEAAEAAAAGAAAAAAAEAAIAAAAHAAAAAAAEAAIAAAAIAAAAAAAEAAIAAAALAAAAAAAEAAIAAAAMAAAAAAAEAAIAAAAJAAAAAAAEAAEAAAAKAAAAAAAEAAEAAAAFAPv/AAAEAAEAAAAFAPr/AAAEAAEAAAAGAPr/AAAEAAEAAAAGAPv/AAAEAAEAAAAGAPn/AAAEAAEAAAAHAPn/AAAEAAEAAAAHAPr/AAAEAAEAAAAHAPv/AAAEAAEAAAAIAPv/AAAEAAEAAAAIAPz/AAAEAAEAAAAJAPz/AAAEAAEAAAAJAPv/AAAEAAEAAAAMAPv/AAAEAAEAAAAMAPz/AAAEAAEAAAANAPz/AAAEAAEAAAANAPv/AAAEAAEAAAAKAPv/AAAEAAIAAAALAPv/AAAEAAIAAAANAPr/AAAEAAEAAAAOAPr/AAAEAAEAAAAPAPr/AAAEAAEAAAAPAPv/AAAEAAEAAAAOAPv/AAAEAAEAAAAOAPz/AAAEAAEAAAAPAPz/AAAEAAEAAAAQAPv/AAAEAAEAAAANAAAAAAAEAAEAAAAOAAAAAAAEAAEAAAAPAAAAAAAEAAEAAAAQAAAAAAAEAAEAAAATAP//AAAEAAIAAAAVAP3/AAAEAAIAAAASAPv/AAAEAAIAAAA=")
 tile_set = SubResource("TileSet_lk7cf")
 
-[node name="Player" parent="." instance=ExtResource("2_jji5p")]
+[node name="Satyr" parent="." instance=ExtResource("3_lk7cf")]
+position = Vector2(-2, -11)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -14)
+[node name="Camera2D" type="Camera2D" parent="Satyr"]
+position = Vector2(-1, -14)
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true

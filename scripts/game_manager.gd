@@ -4,7 +4,7 @@ var player_position: Vector2
 
 func swap_worlds(new_world_path: String):
 	# Store the player's position
-	var player = get_tree().current_scene.get_node("Player")
+	var player = get_tree().current_scene.get_node("Satyr")
 	player_position = player.global_position
 
 	# Load the new world
@@ -14,5 +14,5 @@ func swap_worlds(new_world_path: String):
 	get_tree().current_scene = new_world
 
 	# Set the player's position in the new world
-	var new_player = new_world.get_node("Player")
+	var new_player = new_world.get_node("Satyr")
 	new_player.global_position = player_position

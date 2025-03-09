@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://cy7vgjf0tegp3"]
+[gd_scene load_steps=8 format=4 uid="uid://bymxhmgc1dsf8"]
 
-[ext_resource type="Script" uid="uid://dvcljqm8g8js1" path="res://scenes/testmap_present.gd" id="1_ypqmg"]
+[ext_resource type="Script" path="res://scenes/testmap_present.gd" id="1_ypqmg"]
 [ext_resource type="PackedScene" uid="uid://dj3wy8sidk1ih" path="res://scenes/player.tscn" id="2_j3r5c"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="3_7o1vi"]
 [ext_resource type="Texture2D" uid="uid://d02y4wk6gtbjn" path="res://assets/sprites/PhaseShift_LabTiles.png" id="4_43kel"]
