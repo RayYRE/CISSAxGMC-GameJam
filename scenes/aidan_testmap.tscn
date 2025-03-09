@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://blq0dvvuh4r4s"]
+[gd_scene load_steps=12 format=4 uid="uid://blq0dvvuh4r4s"]
 
 [ext_resource type="Script" uid="uid://dvcljqm8g8js1" path="res://scripts/aidan_testmap.gd" id="1_iumt8"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_0p3n5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d02y4wk6gtbjn" path="res://assets/sprites/PhaseShift_LabTiles.png" id="3_ramgd"]
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="4_fhmyy"]
 [ext_resource type="PackedScene" uid="uid://bov3r7w307myn" path="res://scenes/scientist.tscn" id="5_fhmyy"]
+[ext_resource type="PackedScene" uid="uid://cpsuq5uhrpjru" path="res://scenes/monster.tscn" id="7_fhmyy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x76j4"]
 texture = ExtResource("2_0p3n5")
@@ -347,5 +348,5 @@ position = Vector2(229, -17)
 unique_name_in_owner = true
 position = Vector2(1, -16)
 
-[node name="Scientist2" parent="." instance=ExtResource("5_fhmyy")]
-position = Vector2(398, -98)
+[node name="Monster" parent="." instance=ExtResource("7_fhmyy")]
+position = Vector2(431, -89)
