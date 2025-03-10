@@ -337,6 +337,7 @@ tile_set = SubResource("TileSet_lnu2h")
 position = Vector2(-1, -5)
 
 [node name="Camera2D" type="Camera2D" parent="Satyr"]
+unique_name_in_owner = true
 position = Vector2(0, -14)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true

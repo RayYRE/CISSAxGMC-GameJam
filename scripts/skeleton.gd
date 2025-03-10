@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_active:
 		velocity.x = 0
+		animated_sprite.play("idle")
 		return
 	
 	# Apply gravity

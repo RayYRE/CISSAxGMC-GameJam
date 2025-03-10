@@ -16,8 +16,9 @@ func _physics_process(delta: float) -> void:
 	collision_shape.set_deferred("disabled", not is_active)
 	visible = is_active
 	
-	if not is_active:
+	if not is_active or player.is_dying or player.is_dead:
 		velocity.x = 0
+		animated_sprite.play("idle")
 		return
 	
 	# Apply gravity

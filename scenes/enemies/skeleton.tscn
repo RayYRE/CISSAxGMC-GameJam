@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://ch1f80s6gdc1x"]
 
-[ext_resource type="Script" path="res://scripts/skeleton.gd" id="1_5365w"]
+[ext_resource type="Script" uid="uid://ce4cqvr2p6rsl" path="res://scripts/skeleton.gd" id="1_5365w"]
 [ext_resource type="Texture2D" uid="uid://bylnku3k4twj6" path="res://assets/sprites/Skeleton enemy.png" id="2_esykl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5365w"]

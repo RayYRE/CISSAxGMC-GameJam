@@ -1,7 +1,51 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwaieox6t40d5"]
+[gd_scene load_steps=35 format=3 uid="uid://dwaieox6t40d5"]
 
 [ext_resource type="Script" uid="uid://diaru47nsfyo0" path="res://scripts/satyr.gd" id="1_pha4t"]
 [ext_resource type="Texture2D" uid="uid://dsxo7lgn5gtfy" path="res://assets/sprites/Lab/Satyr/satiro-Sheet v1.1.png" id="2_cfhio"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2814"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(288, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pha4t"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfhio"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aun3l"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pge01"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yos5q"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rr51"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv1mt"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(192, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bu4y"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(224, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5k1a"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(256, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2v6l"]
+atlas = ExtResource("2_cfhio")
+region = Rect2(288, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n6pvg"]
 atlas = ExtResource("2_cfhio")
@@ -77,6 +121,49 @@ region = Rect2(224, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pjw23"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2814")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pha4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfhio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aun3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pge01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yos5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rr51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv1mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bu4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5k1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2v6l")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n6pvg")
@@ -162,7 +249,7 @@ script = ExtResource("1_pha4t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pjw23")
-animation = &"idle"
+animation = &"dead"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
