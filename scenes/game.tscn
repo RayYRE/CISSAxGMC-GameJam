@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://b3dnqm7fpr4lx"]
+[gd_scene load_steps=12 format=4 uid="uid://b3dnqm7fpr4lx"]
 
 [ext_resource type="Script" uid="uid://dermbt84uuw0" path="res://scripts/game.gd" id="1_lnu2h"]
-[ext_resource type="Script" uid="uid://ctttso0uitg4i" path="res://scripts/world_audio_manager.gd" id="2_iywne"]
+[ext_resource type="Script" path="res://scripts/world_audio_manager.gd" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_yqjtg"]
-[ext_resource type="AudioStream" uid="uid://c4ey077fb3ue3" path="res://assets/music/loud af bgm - 8bit.mp3" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="4_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://bjkhaaaldvx2j" path="res://assets/sprites/PhaseShift_FutureLabTiles.png" id="6_p57ef"]
 
@@ -289,7 +288,6 @@ script = ExtResource("1_lnu2h")
 script = ExtResource("2_iywne")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldAudioManager"]
-stream = ExtResource("3_p57ef")
 volume_db = -25.0
 autoplay = true
 bus = &"bgm"
@@ -303,6 +301,8 @@ collision_mask = 2
 unique_name_in_owner = true
 position = Vector2(0, -14)
 zoom = Vector2(2.5, 2.5)
+limit_bottom = 190
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Original" type="TileMapLayer" parent="."]
