@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	
 func swap_worlds():
 	# Store the player's position
-	if current_world == ORIGINALWORLD:
+	if %Lab.is_enabled():
 		world_swap_handler(%Lab, %Future)
 		%LabBackground.hide()
 		%FutureBackground.show()
