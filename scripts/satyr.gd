@@ -3,9 +3,10 @@ class_name Satyr
 
 @export var Coyote_Time: float = 0.1
 @onready var coyote_timer: Timer = $Coyote_Timer
-@export var Jump_Buffer_Timer: float = 0.1
+@export var Jump_Buffer_Timer: float = 0.2
 @export_range(0, 1) var deceleration = 0.1
-@export_range(0, 1) var acceleration = 0.1
+@export_range(0, 1) var acceleration = 0.08
+@export_range(0, 1) var decelerate_on_jump_release = 0.3
 
 const MAX_SPEED = 120.0
 const JUMP_VELOCITY = -220.0
@@ -27,9 +28,9 @@ func _physics_process(delta: float) -> void:
 			if coyote_timer.is_stopped():
 				coyote_timer.start(Coyote_Time)
 			#get_tree().create_timer(Coyote_Time).timeout.connect(Coyote_Timeout)
-		
-		velocity += get_gravity() * delta
-		
+		if velocity.y < 250:
+			velocity += get_gravity() * delta
+		print(velocity.y)
 	else:
 		Jump_Available = true
 		coyote_timer.stop()
@@ -55,6 +56,10 @@ func _physics_process(delta: float) -> void:
 		else:
 			Jump_Buffer = true
 			get_tree().create_timer(Jump_Buffer_Timer).timeout.connect(on_jump_buffer_timeout)
+
+	# Handle Deceleration on Jump Release
+	if Input.is_action_just_released("jump") and velocity.y < 0:
+		velocity.y *= decelerate_on_jump_release
 
 	# Facing Direction
 	var direction := Input.get_axis("move_left", "move_right")

@@ -36,11 +36,17 @@ func swap_worlds():
 		%LabBackgrounds.hide()
 		%FutureBackground.show()
 		%Platform1.set_collision_layer_value(2, false)
+		%Platform1.hide()
+		%Platform2.set_collision_layer_value(2, false)
+		%Platform2.hide()
 		current_world = NOHUMANSWORLD
 		other_world = ORIGINALWORLD
 	else:
 		world_swap_handler(%Future, %Lab)
 		%Platform1.set_collision_layer_value(2, true)
+		%Platform1.show()
+		%Platform2.set_collision_layer_value(2, true)
+		%Platform2.show()
 		%LabBackgrounds.show()
 		%FutureBackground.hide()
 
