@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		%FutureBackground.hide()
 		start = 1
 	
-	if Input.is_action_just_pressed("phaseshift"):
+	if Input.is_action_just_pressed("phaseshift") and not PLAYER.is_dying and not PLAYER.is_dead:
 		swap_worlds()
 		pass
 	

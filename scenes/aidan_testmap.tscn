@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://blq0dvvuh4r4s"]
+[gd_scene load_steps=14 format=4 uid="uid://blq0dvvuh4r4s"]
 
 [ext_resource type="Script" uid="uid://dvcljqm8g8js1" path="res://scripts/aidan_testmap.gd" id="1_iumt8"]
 [ext_resource type="Texture2D" uid="uid://duoqhwhe8nk3d" path="res://assets/sprites/PhaseShift_Tiles.png" id="2_0p3n5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dwaieox6t40d5" path="res://scenes/satyr.tscn" id="4_fhmyy"]
 [ext_resource type="PackedScene" uid="uid://bov3r7w307myn" path="res://scenes/enemies/scientist.tscn" id="5_fhmyy"]
 [ext_resource type="PackedScene" uid="uid://ch1f80s6gdc1x" path="res://scenes/enemies/skeleton.tscn" id="8_58vtd"]
+[ext_resource type="PackedScene" uid="uid://c7hiiy74a7263" path="res://scenes/enemies/human.tscn" id="8_448du"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x76j4"]
 texture = ExtResource("2_0p3n5")
@@ -320,6 +321,9 @@ sources/0 = SubResource("TileSetAtlasSource_x76j4")
 sources/2 = SubResource("TileSetAtlasSource_rb6do")
 sources/1 = SubResource("TileSetAtlasSource_odtcn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58vtd"]
+size = Vector2(1199, 47)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_iumt8")
 
@@ -351,3 +355,13 @@ position = Vector2(1, -16)
 
 [node name="Skeleton" parent="." instance=ExtResource("8_58vtd")]
 position = Vector2(330, -24)
+
+[node name="Human" parent="." instance=ExtResource("8_448du")]
+position = Vector2(394, -96)
+
+[node name="Void" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
+position = Vector2(174.5, 49.5)
+shape = SubResource("RectangleShape2D_58vtd")

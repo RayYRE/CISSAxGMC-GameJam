@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	# If space bar pressed, world switch
-	if Input.is_action_just_pressed("phaseshift"):
+	if Input.is_action_just_pressed("phaseshift") and not $Satyr.is_dying and not $Satyr.is_dead:
 		swap_worlds()
 	pass
 # Call this function to swap the world by hiding/showing tilemaps

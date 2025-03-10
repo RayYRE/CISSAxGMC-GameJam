@@ -11,7 +11,11 @@ var is_dying = 0
 var is_dead = 0
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	
+	# Gravity
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
 	if is_dying:
 		animated_sprite.play("death")
 		await get_tree().create_timer(1).timeout
@@ -22,18 +26,13 @@ func _physics_process(delta: float) -> void:
 	if is_dead:
 		animated_sprite.play("dead")
 		return
-		
-	if not is_on_floor():
-		velocity += get_gravity() * delta
 
-	# Handle jump.
+	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction: -1, 0, 1
+	# Facing Direction
 	var direction := Input.get_axis("move_left", "move_right")
-	
-	# Flip the Player
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:

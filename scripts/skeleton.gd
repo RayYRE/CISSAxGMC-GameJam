@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-@export var speed: float = 50.0  
-@export var gravity: float = 980.0  
-@export var detect_range: float = 100.0
-@export var jump_force: float = 200.0
+const SPEED: float = 50.0   
+const DETECT_RANGE: float = 100.0
+const JUMP_STRENGTH: float = 100.0
 
-@onready var tilemap_origin: Node = get_tree().current_scene.get_node("TileMapLayerFuture")
+@onready var tilemap_origin: Node = get_tree().current_scene.get_node("Future")
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var player: CharacterBody2D = get_tree().current_scene.get_node("Satyr")
@@ -16,24 +15,24 @@ func _physics_process(delta: float) -> void:
 	collision_shape.set_deferred("disabled", not is_active)
 	visible = is_active
 	
-	if not is_active:
+	if not is_active or player.is_dying or player.is_dead:
 		velocity.x = 0
 		animated_sprite.play("idle")
 		return
 	
 	# Apply gravity
 	if not is_on_floor():
-		velocity.y += gravity * delta 
+		velocity += get_gravity() * delta 
 
 	# Check for player detection
-	if global_position.distance_to(player.global_position) < detect_range:
+	if global_position.distance_to(player.global_position) < DETECT_RANGE:
 		var direction = (player.global_position - global_position).normalized()
-		velocity.x = direction.x * speed  
+		velocity.x = direction.x * SPEED  
 		animated_sprite.flip_h = direction.x < 0
 		
 		# Jump if the player is above the enemy
 		if player.global_position.y < global_position.y - 0 and is_on_floor() and is_on_wall():
-			velocity.y = -jump_force
+			velocity.y = -JUMP_STRENGTH
 		if is_on_floor():
 			animated_sprite.play("walk" if abs(velocity.x) > 1 else "idle")
 			

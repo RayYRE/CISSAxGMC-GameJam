@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://b3dnqm7fpr4lx"]
+[gd_scene load_steps=48 format=4 uid="uid://b3dnqm7fpr4lx"]
 
 [ext_resource type="Script" uid="uid://dermbt84uuw0" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="Script" uid="uid://ctttso0uitg4i" path="res://scripts/world_audio_manager.gd" id="2_iywne"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://qisit172t5ss" path="res://assets/sprites/Lab/Scifi lab Files/layers/front.png" id="13_bhx41"]
 [ext_resource type="Texture2D" uid="uid://bjwxg2kvpkd2b" path="res://assets/sprites/Lab/Scifi lab Files/layers/middle.png" id="14_qnb83"]
 [ext_resource type="Texture2D" uid="uid://cc8xelq0n3m8q" path="res://assets/sprites/Lab/sci-fi-interior-platform/PNG/tile-set-sci-fi-interior-platform.png" id="15_sww3w"]
+[ext_resource type="PackedScene" uid="uid://bov3r7w307myn" path="res://scenes/enemies/scientist.tscn" id="17_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://ch1f80s6gdc1x" path="res://scenes/enemies/skeleton.tscn" id="18_264po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suyxu"]
 texture = ExtResource("7_1kice")
@@ -3459,5 +3461,11 @@ zoom = Vector2(2.5, 2.5)
 limit_bottom = 190
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="Scientist" parent="." instance=ExtResource("17_ssvqc")]
+position = Vector2(12, -57)
+
+[node name="Skeleton" parent="." instance=ExtResource("18_264po")]
+position = Vector2(251, -66)
 
 [connection signal="body_shape_entered" from="Void" to="Satyr" method="_on_area_2d_body_shape_entered"]
