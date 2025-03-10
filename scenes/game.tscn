@@ -3441,7 +3441,7 @@ tile_set = SubResource("TileSet_ms3bu")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Void"]
-position = Vector2(358, 61.5)
+position = Vector2(340, 110)
 shape = SubResource("RectangleShape2D_p57ef")
 
 [node name="Platform1" parent="." instance=ExtResource("4_rysoc")]

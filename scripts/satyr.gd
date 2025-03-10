@@ -56,14 +56,13 @@ func _physics_process(delta: float) -> void:
 
 func player_death():
 	is_dying = 1
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1.5).timeout
 	retry_popup = preload("res://scenes/death_screen.tscn").instantiate()
 	retry_popup.position = %Camera2D.global_position
 	get_tree().current_scene.add_child(retry_popup)
 	
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	await get_tree().create_timer(0.5).timeout
 	player_death()
 
 
