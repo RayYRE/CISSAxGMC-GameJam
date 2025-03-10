@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Satyr
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -160.0

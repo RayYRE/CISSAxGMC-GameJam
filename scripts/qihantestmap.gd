@@ -21,6 +21,11 @@ func _process(delta: float) -> void:
 		pass
 	
 func swap_worlds():
+	
+	ShiftTransition.change_scene("res://scripts/qihantestmap.gd")
+	
+	await get_tree().create_timer(0.2).timeout
+	
 	# Store the player's position
 	if %Lab.is_enabled():
 		world_swap_handler(%Lab, %Future)
@@ -38,7 +43,7 @@ func swap_worlds():
 		
 		current_world = ORIGINALWORLD
 		other_world = NOHUMANSWORLD
-		
+	
 		
 func world_swap_handler(current_world, swap_to_world):
 	current_world.set_enabled(false)
