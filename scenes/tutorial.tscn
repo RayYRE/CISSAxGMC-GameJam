@@ -3396,6 +3396,8 @@ unique_name_in_owner = true
 position = Vector2(2, 5)
 zoom = Vector2(3, 3)
 
+[node name="Coyote_Timer" type="Timer" parent="Satyr"]
+
 [node name="Void" type="Area2D" parent="."]
 collision_layer = 8
 

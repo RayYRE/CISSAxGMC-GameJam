@@ -3,9 +3,13 @@ class_name Satyr
 
 @export var Coyote_Time: float = 0.1
 @onready var coyote_timer: Timer = $Coyote_Timer
+@export var Jump_Buffer_Timer: float = 0.1
+@export_range(0, 1) var deceleration = 0.1
+@export_range(0, 1) var acceleration = 0.1
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -165.0
+const MAX_SPEED = 120.0
+const JUMP_VELOCITY = -220.0
+
 var Jump_Available: bool = true
 var Jump_Buffer: bool = false
 
@@ -29,6 +33,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		Jump_Available = true
 		coyote_timer.stop()
+		if Jump_Buffer:
+			Jump()
+			Jump_Buffer = false
 
 	if is_dying:
 		animated_sprite.play("death")
@@ -42,9 +49,12 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# Jump
-	if Input.is_action_just_pressed("jump") and Jump_Available:
-		velocity.y = JUMP_VELOCITY
-		Jump_Available = false
+	if Input.is_action_just_pressed("jump"):
+		if Jump_Available:
+			Jump()
+		else:
+			Jump_Buffer = true
+			get_tree().create_timer(Jump_Buffer_Timer).timeout.connect(on_jump_buffer_timeout)
 
 	# Facing Direction
 	var direction := Input.get_axis("move_left", "move_right")
@@ -63,9 +73,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("jump")
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = move_toward(velocity.x, direction * MAX_SPEED, MAX_SPEED * acceleration)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, MAX_SPEED * deceleration)
 
 	move_and_slide()
 
@@ -89,5 +99,15 @@ func _on_void_body_entered(body: Node2D) -> void:
 	await get_tree().create_timer(0.5).timeout
 	player_death()
 
+
+func Jump()->void:
+		velocity.y = JUMP_VELOCITY
+		Jump_Available = false
+
+
 func Coyote_Timeout():
 	Jump_Available = true
+
+
+func on_jump_buffer_timeout()->void:
+	Jump_Buffer = false

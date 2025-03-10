@@ -3492,6 +3492,7 @@ stream = ExtResource("3_5newe")
 volume_db = -25.0
 autoplay = true
 bus = &"bgm"
+parameters/looping = true
 
 [node name="LabBackgrounds" type="CanvasGroup" parent="."]
 unique_name_in_owner = true

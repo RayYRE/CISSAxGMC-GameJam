@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PhaseShift"
-run/main_scene="uid://b3dnqm7fpr4lx"
+run/main_scene="uid://tcejnfhpq5ia"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -54,7 +54,7 @@ phaseshift={
 
 [physics]
 
-2d/default_gravity=300.0
+2d/default_gravity=500.0
 
 [rendering]
 
