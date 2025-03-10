@@ -21,7 +21,10 @@ var is_dying = 0
 var is_dead = 0
 
 func _physics_process(delta: float) -> void:
-	
+	print(1)
+	print(is_on_floor())
+	print(2)
+	print(Jump_Available)
 	# Gravity
 	if not is_on_floor():
 		if Jump_Available:
@@ -30,7 +33,7 @@ func _physics_process(delta: float) -> void:
 			#get_tree().create_timer(Coyote_Time).timeout.connect(Coyote_Timeout)
 		if velocity.y < 250:
 			velocity += get_gravity() * delta
-		print(velocity.y)
+		#print(velocity.y)
 	else:
 		Jump_Available = true
 		coyote_timer.stop()
@@ -111,7 +114,7 @@ func Jump()->void:
 
 
 func Coyote_Timeout():
-	Jump_Available = true
+	Jump_Available = false
 
 
 func on_jump_buffer_timeout()->void:
