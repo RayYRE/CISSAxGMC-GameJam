@@ -6,7 +6,7 @@ extends Node2D
 var current_world = ORIGINALWORLD
 var other_world = NOHUMANSWORLD
 var start = 0
-
+var phasecooldown = false
  
 func _process(delta: float) -> void:
 	if start == 0:
@@ -17,7 +17,11 @@ func _process(delta: float) -> void:
 		start = 1
 	
 	if Input.is_action_just_pressed("phaseshift") and not PLAYER.is_dying and not PLAYER.is_dead:
-		swap_worlds()
+		if phasecooldown == false:
+			swap_worlds()
+			phasecooldown = true
+			await get_tree().create_timer(0.4).timeout
+			phasecooldown = false
 		pass
 	
 func swap_worlds():
