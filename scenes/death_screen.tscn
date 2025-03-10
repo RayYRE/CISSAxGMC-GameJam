@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://b26jjuocxwqqf" path="res://assets/Retro Gaming.ttf" id="2_mqh5l"]
 
 [node name="DeathScreen" type="Control"]
+z_index = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
