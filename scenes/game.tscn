@@ -3568,6 +3568,8 @@ limit_bottom = 190
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="Coyote_Timer" type="Timer" parent="Satyr"]
+
 [node name="Scientist" parent="." instance=ExtResource("17_ssvqc")]
 position = Vector2(20, -72)
 
@@ -3578,3 +3580,4 @@ position = Vector2(458, -205)
 position = Vector2(253, -75)
 
 [connection signal="body_shape_entered" from="Void" to="Satyr" method="_on_area_2d_body_shape_entered"]
+[connection signal="timeout" from="Satyr/Coyote_Timer" to="Satyr" method="Coyote_Timeout"]

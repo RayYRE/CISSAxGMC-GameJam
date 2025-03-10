@@ -1,8 +1,13 @@
 extends CharacterBody2D
 class_name Satyr
 
+@export var Coyote_Time: float = 0.1
+@onready var coyote_timer: Timer = $Coyote_Timer
+
 const SPEED = 100.0
 const JUMP_VELOCITY = -165.0
+var Jump_Available: bool = true
+var Jump_Buffer: bool = false
 
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D 
@@ -14,7 +19,16 @@ func _physics_process(delta: float) -> void:
 	
 	# Gravity
 	if not is_on_floor():
+		if Jump_Available:
+			if coyote_timer.is_stopped():
+				coyote_timer.start(Coyote_Time)
+			#get_tree().create_timer(Coyote_Time).timeout.connect(Coyote_Timeout)
+		
 		velocity += get_gravity() * delta
+		
+	else:
+		Jump_Available = true
+		coyote_timer.stop()
 
 	if is_dying:
 		animated_sprite.play("death")
@@ -28,8 +42,9 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# Jump
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and Jump_Available:
 		velocity.y = JUMP_VELOCITY
+		Jump_Available = false
 
 	# Facing Direction
 	var direction := Input.get_axis("move_left", "move_right")
@@ -73,3 +88,6 @@ func _on_hitbox_area_body_entered(body: Node2D) -> void:
 func _on_void_body_entered(body: Node2D) -> void:
 	await get_tree().create_timer(0.5).timeout
 	player_death()
+
+func Coyote_Timeout():
+	Jump_Available = true
