@@ -21,10 +21,7 @@ var is_dying = 0
 var is_dead = 0
 
 func _physics_process(delta: float) -> void:
-	print(1)
-	print(is_on_floor())
-	print(2)
-	print(Jump_Available)
+
 	# Gravity
 	if not is_on_floor():
 		if Jump_Available:
