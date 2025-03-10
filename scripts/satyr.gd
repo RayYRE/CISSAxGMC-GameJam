@@ -5,7 +5,8 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -160.0
 
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D 
+var retry_popup
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -42,8 +43,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func player_death():
-	animated_sprite.flip_h = false
-	global_position = %SpawnPoint.position
+	retry_popup = preload("res://scenes/death_screen.tscn").instantiate()
+	retry_popup.position = %Camera2D.global_position
+	get_tree().current_scene.add_child(retry_popup)
 	
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
@@ -52,7 +54,6 @@ func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_inde
 
 
 func _on_hitbox_area_body_entered(body: Node2D) -> void:
-	print("dead")
 	player_death()
 
 
