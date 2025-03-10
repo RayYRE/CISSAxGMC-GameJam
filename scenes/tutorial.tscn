@@ -3389,6 +3389,7 @@ tile_map_data = PackedByteArray("AAAaABAABwACAAUAAAAaABEABwACAAYAAAAbABAABwADAAU
 tile_set = SubResource("TileSet_oumur")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(602, 229)
 zoom = Vector2(3, 3)
 
