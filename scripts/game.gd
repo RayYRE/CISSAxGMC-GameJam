@@ -8,7 +8,7 @@ var other_world = NOHUMANSWORLD
 var start = 0
 var phasecooldown = false
  
-func _process(delta: float) -> void:
+func _process(delta: float) -> void: 
 	if start == 0:
 		%Lab.set_enabled(true)
 		%LabBackgrounds.show()
