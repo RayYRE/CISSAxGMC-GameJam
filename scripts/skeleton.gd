@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		return
 	
-	animated_sprite.play("walk")
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta 
@@ -29,13 +28,17 @@ func _physics_process(delta: float) -> void:
 	if global_position.distance_to(player.global_position) < detect_range:
 		var direction = (player.global_position - global_position).normalized()
 		velocity.x = direction.x * speed  
-		animated_sprite.flip_h = direction.x > 0
+		animated_sprite.flip_h = direction.x < 0
 		
 		# Jump if the player is above the enemy
 		if player.global_position.y < global_position.y - 0 and is_on_floor() and is_on_wall():
 			velocity.y = -jump_force
+		if is_on_floor():
+			animated_sprite.play("walk" if abs(velocity.x) > 1 else "idle")
+			
 			
 	else:
+		animated_sprite.play("idle")
 		velocity.x = 0
 	
 	move_and_slide()
