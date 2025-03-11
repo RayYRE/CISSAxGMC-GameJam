@@ -21,6 +21,8 @@ var win
 var is_dying = 0
 var is_dead = 0
 var is_win = 0
+var stuck
+var phasing = false
 
 @onready var death_sfx: AudioStreamPlayer = $"../DeathSFX"
 
@@ -44,8 +46,13 @@ func _physics_process(delta: float) -> void:
 			Jump()
 			Jump_Buffer = false
 			
+	if Input.is_action_just_pressed("phaseshift") and not is_dying and not is_dead:
+		if phasing == false:
+			phasing = true
+			await get_tree().create_timer(0.5).timeout
+			phasing = false
+		pass
 	
-
 	if is_dying:
 		animated_sprite.play("death")
 		await get_tree().create_timer(1).timeout
@@ -92,6 +99,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, direction * MAX_SPEED, MAX_SPEED * acceleration)
 	else:
 		velocity.x = move_toward(velocity.x, 0, MAX_SPEED * deceleration)
+		
+	if not is_on_floor():
+		if not phasing:
+			if get_position_delta()  == Vector2.ZERO:
+				player_death()
 
 	move_and_slide()
 
