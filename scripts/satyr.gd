@@ -43,6 +43,8 @@ func _physics_process(delta: float) -> void:
 		if Jump_Buffer:
 			Jump()
 			Jump_Buffer = false
+			
+	
 
 	if is_dying:
 		animated_sprite.play("death")
