@@ -3415,7 +3415,7 @@ tile_map_data = PackedByteArray("AAAaABAABwACAAUAAAAaABEABwACAAYAAAAbABAABwADAAU
 tile_set = SubResource("TileSet_oumur")
 
 [node name="Satyr" parent="." instance=ExtResource("4_cmspm")]
-position = Vector2(600, 224)
+position = Vector2(597, 262)
 
 [node name="Camera2D" type="Camera2D" parent="Satyr"]
 unique_name_in_owner = true
@@ -3433,7 +3433,7 @@ shape = SubResource("RectangleShape2D_wr8iv")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(600, 224)
+position = Vector2(600, 266)
 
 [node name="DeathSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_e13mp")
