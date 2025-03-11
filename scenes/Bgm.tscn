@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://7wsky14yj35o"]
+
+[ext_resource type="AudioStream" uid="uid://c4ey077fb3ue3" path="res://assets/music/loud af bgm - 8bit.mp3" id="1_qn7xl"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_qn7xl")
+volume_db = -30.0
+autoplay = true
+bus = &"bgm"
+parameters/looping = true

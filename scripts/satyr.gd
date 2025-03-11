@@ -20,6 +20,10 @@ var retry_popup
 var is_dying = 0
 var is_dead = 0
 
+@onready var death_sfx: AudioStreamPlayer = $"../DeathSFX"
+
+
+
 func _physics_process(delta: float) -> void:
 
 	# Gravity
@@ -85,6 +89,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func player_death():
+	death_sfx.play()
 	is_dying = 1
 	await get_tree().create_timer(1.5).timeout
 	retry_popup = preload("res://scenes/death_screen.tscn").instantiate()
