@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://di2u2w331tiv5"]
+[gd_scene load_steps=46 format=4 uid="uid://di2u2w331tiv5"]
 
 [ext_resource type="Script" uid="uid://bgvfcn1x1g32p" path="res://scripts/tutorial.gd" id="1_wr8iv"]
 [ext_resource type="Texture2D" uid="uid://cov265n6w2giq" path="res://assets/sprites/Lab/sci-fi-interior-platform/PNG/background.png" id="2_e13mp"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://qisit172t5ss" path="res://assets/sprites/Lab/Scifi lab Files/layers/front.png" id="13_qbchm"]
 [ext_resource type="Texture2D" uid="uid://bjwxg2kvpkd2b" path="res://assets/sprites/Lab/Scifi lab Files/layers/middle.png" id="14_gxgfo"]
 [ext_resource type="Texture2D" uid="uid://cc8xelq0n3m8q" path="res://assets/sprites/Lab/sci-fi-interior-platform/PNG/tile-set-sci-fi-interior-platform.png" id="15_sbw1o"]
+[ext_resource type="AudioStream" uid="uid://cne3yrdtq5oi5" path="res://assets/music/game-over-arcade-6435.mp3" id="16_e13mp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r5qms"]
 texture = ExtResource("5_ikfo1")
@@ -3432,6 +3433,10 @@ shape = SubResource("RectangleShape2D_wr8iv")
 [node name="SpawnPoint" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(600, 224)
+
+[node name="DeathSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_e13mp")
+volume_db = -15.0
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="body_entered" from="Void" to="Satyr" method="_on_void_body_entered"]
