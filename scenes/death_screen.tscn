@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnqbt71gud0pw"]
 
-[ext_resource type="Script" path="res://scripts/DeathScreen.gd" id="1_dwo6e"]
+[ext_resource type="Script" uid="uid://5j5ic6ewep7s" path="res://scripts/DeathScreen.gd" id="1_dwo6e"]
 [ext_resource type="FontFile" uid="uid://b26jjuocxwqqf" path="res://assets/Retro Gaming.ttf" id="2_mqh5l"]
 
 [node name="DeathScreen" type="Control"]
@@ -51,4 +51,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "RETRY"
 
+[node name="MainMenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "MAIN MENU"
+
 [connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

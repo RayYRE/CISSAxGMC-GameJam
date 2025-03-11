@@ -17,8 +17,10 @@ var Jump_Buffer: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D 
 var retry_popup
+var win
 var is_dying = 0
 var is_dead = 0
+var is_win = 0
 
 @onready var death_sfx: AudioStreamPlayer = $"../DeathSFX"
 
@@ -51,6 +53,9 @@ func _physics_process(delta: float) -> void:
 		
 	if is_dead:
 		animated_sprite.play("dead")
+		return
+		
+	if is_win:
 		return
 
 	# Jump
@@ -121,3 +126,11 @@ func Coyote_Timeout():
 
 func on_jump_buffer_timeout()->void:
 	Jump_Buffer = false
+
+
+func _on_win_area_body_entered(body: Node2D) -> void:
+	win = preload("res://scenes/win.tscn").instantiate()
+	is_win = 1
+	animated_sprite.play("idle")
+	win.position = %Camera2D.global_position
+	get_tree().current_scene.add_child(win)
